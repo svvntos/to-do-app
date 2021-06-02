@@ -12,13 +12,8 @@ formEL.addEventListener('submit', (e) => {
         const newToDo = document.createElement('li');
         newToDo.innerText = todoText;
 
-        const clearBtn = document.createElement('a');
-        clearBtn.className = 'delete-item';
-        clearBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
-        newToDo.appendChild(clearBtn);
-
-
-
+    
+    
         newToDo.addEventListener('click', () => {
             newToDo.classList.toggle('completed');
         })
@@ -28,7 +23,6 @@ formEL.addEventListener('submit', (e) => {
             newToDo.remove();
         })
  
-
 
 todoEL.appendChild(newToDo);
 
