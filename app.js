@@ -21,17 +21,9 @@ formEL.addEventListener('submit', (e) => {
 
         newToDo.addEventListener('click', () => {
             newToDo.classList.toggle('completed');
-            setInterval(remove(todoEL), 3000)
         })
 
-    //     newToDo.addEventListener('click', (e) => {
-    //         if (newToDo.parentElement.classList.contains('delete-item')) {
-            
-    //             console.log(e.target)
-    //                 // e.target.parentElement.parentElement.remove();
-    //         }
-    // })
-
+ 
 
 
 todoEL.appendChild(newToDo);
