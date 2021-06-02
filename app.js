@@ -23,6 +23,10 @@ formEL.addEventListener('submit', (e) => {
             newToDo.classList.toggle('completed');
         })
 
+        newToDo.addEventListener("contextmenu" || "touchend", (e) =>{
+            e.preventDefault();
+            newToDo.remove();
+        })
  
 
 
