@@ -12,23 +12,31 @@ formEL.addEventListener('submit', (e) => {
         const newToDo = document.createElement('li');
         newToDo.innerText = todoText;
 
+        const clearBtn = document.createElement('a');
+        clearBtn.className = 'delete-item';
+        clearBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+        newToDo.appendChild(clearBtn);
+
+
+
         newToDo.addEventListener('click', () => {
             newToDo.classList.toggle('completed');
+            setInterval(remove(todoEL), 3000)
         })
 
-        newToDo.addEventListener('contextmenu', (e) => {
+    //     newToDo.addEventListener('click', (e) => {
+    //         if (newToDo.parentElement.classList.contains('delete-item')) {
+            
+    //             console.log(e.target)
+    //                 // e.target.parentElement.parentElement.remove();
+    //         }
+    // })
 
-            e.preventDefault();
-
-            newToDo.remove();
-        }
 
 
-        )
+todoEL.appendChild(newToDo);
 
-        todoEL.appendChild(newToDo);
-
-        inputEL.value = '';
+inputEL.value = '';
     }
 
 
