@@ -8,9 +8,24 @@ formEL.addEventListener('submit', (e) => {
 
     const todoText = inputEL.value;
 
-    if(todoText) {
+    if (todoText) {
         const newToDo = document.createElement('li');
         newToDo.innerText = todoText;
+
+        newToDo.addEventListener('click', () => {
+            newToDo.classList.toggle('completed');
+        })
+
+        newToDo.addEventListener('contextmenu', (e) => {
+
+            e.preventDefault();
+
+            newToDo.remove();
+        }
+
+
+        )
+
         todoEL.appendChild(newToDo);
 
         inputEL.value = '';
